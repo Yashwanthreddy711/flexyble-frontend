@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+This is an assignment for Flexmoney Internship
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Problem Statement : Assume that you are the CTO of an outsourcing firm which has been chosen to build an admission form for the Yoga Classes which happen every month. Requirements for the admission form are:
 
-## Available Scripts
+Only people within the age limit of 18-65 can enroll for the monthly classes and they will be paying the fees on a month on month basis. I.e. an individual will have to pay the fees every month and he can pay it any time of the month.
+They can enroll any day but they will have to pay for the entire month. The monthly fee is 500/- Rs INR.
+There are a total of 4 batches a day namely 6-7AM, 7-8AM, 8-9AM and 5-6PM. The participants can choose any batch in a month and can move to any other batch next month. I.e. participants can shift from one batch to another in different months but in the same month they need to be in the same batch.
+Teck Stack Used: React,Tailwindcss,Express,Mysql server
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ER Diagram:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![ER Diagram](https://github.com/Yashwanthreddy711/flexyble-frontend/assets/99392805/2b639899-5902-441d-9ce3-5f6ad4f3e366)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+SQL Tables:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Users:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![image](https://github.com/Yashwanthreddy711/flexyble-frontend/assets/99392805/f5c81c92-5569-453b-8223-461a9cba93dc)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Payment:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![image](https://github.com/Yashwanthreddy711/flexyble-frontend/assets/99392805/36b6a43b-c041-42ed-a2bb-a44a77d1e995)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To clone the Application:
+git clone https://github.com/Yashwanthreddy711/flexyble-frontend.git
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Implementation Details:
 
-### Deployment
+Frontend:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Admission Form:
+Developed a user-friendly admission form that captures essential details:
 
-### `npm run build` fails to minify
+First Name
+Last Name
+Email
+Phone Number
+Age (strictly between 18 and 65)
+Date of Joining
+Slot Selection (6-7AM, 7-8AM, 8-9AM, 5-6PM)
+Implemented client-side validation to ensure data integrity, especially enforcing age constraints.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Upon form submission, an API call is made to store the participant's details in the MySQL database.
+
+Payment Page:
+After successful form submission, users are redirected to the Payment Page.
+
+The Payment Page collects the following information for processing:
+
+Card Number
+Cardholder Name
+Slot Selection
+Amount to Pay
+Another API call is made to store the payment details in the database.
+
+Backend:
+
+Established a connection between the application and the MySQL server to facilitate data storage.
+
+Utilized Express.js to create HTTP endpoints for handling various requests.
+
+Created specific API endpoints to interact with the database:
+
+Admission Form API: Receives and stores participant details.
+Payment API: Processes and stores payment information.
+
+Note: Ensure that the database schema accommodates both user and payment details and the necessary relationships between them
+
+
+
+
+

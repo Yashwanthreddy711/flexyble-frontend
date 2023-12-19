@@ -30,7 +30,8 @@ Payment:
 
 
 
-![image](https://github.com/Yashwanthreddy711/flexyble-frontend/assets/99392805/36b6a43b-c041-42ed-a2bb-a44a77d1e995)
+![image](https://github.com/Yashwanthreddy711/flexyble-frontend/assets/99392805/31b992ac-90a1-408a-aa88-4f3e1c8a4961)
+
 
 
 
